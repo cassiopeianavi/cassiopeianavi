@@ -1,0 +1,687 @@
+<!-----------------------------------------------------------------------
+About Page [01]: Vengeance     [Corvo version]
+Made by glenthemes
+
+Initial release: 2016/11/17
+Last updated: 2020/04/26
+ 
+TERMS OF USE:
+1) Do not remove the page credit.
+2) Do not repost/redistribute my themes.
+3) Do not take parts of the code and use it as your own.
+4) Do not use my themes as a base code.
+5) Do not mix my themes together.
+
+Customization pointers:
+🌊🌊🌊🌊🌊🌊🌊 = places to edit
+🐟🐟🐟🐟🐟🐟🐟 = start of a section || start copy
+🛑🛑🛑🛑🛑🛑🛑 = end of a section || end copy
+------------------------------------------------------------------------>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ 
+<title>{Title}</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+
+<!--------------------JAVASCRIPTS-------------------->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="//static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:50,
+tip_fade_speed:0,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+ 
+<link href="//fonts.googleapis.com/css?family=Open+Sans|Philosopher|Work+Sans|Quicksand:500|open sans|Questrial" rel="stylesheet">
+
+<script src="//static.tumblr.com/2pnwama/DLppehqvd/feathericons.js"></script>
+
+<script src="//static.tumblr.com/2pnwama/lnLppjutr/gletanica.js"></script>
+ 
+<!-------------------------------------------------------------------->
+ 
+<style type="text/css">
+
+@font-face { font-family: "consolas-alt"; src: url('//dl.dropbox.com/s/xap6ylki7bf2vgw/consolas.ttf'); }
+
+@font-face { font-family: "van helsing"; src: url('//dl.dropboxusercontent.com/s/pkt1zxu7wfgh9oy/Van%20Helsing.ttf'); }
+ 
+/*--------------------TOOLTIPS--------------------*/
+#s-m-t-tooltip {
+    padding:5px 10px;
+    margin:20px;
+    background-color:var(--Tooltips-BG);
+    border-radius:2px;
+    font-family:work sans;
+    font-size:9px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--Tooltips-Text);
+    z-index:99;
+    max-width:40vw;
+}
+ 
+/*--------------------TUMBLR CONTROLS--------------------*/
+iframe#tumblr_controls, .iframe-controls--desktop {
+    top:5px!important;
+    right:5px!important;
+    position:fixed!important;
+    
+    transform:scale(0.7,0.7);
+    -webkit-transform:scale(0.7,0.7);
+    -moz-transform:scale(0.7,0.7);
+    -o-transform:scale(0.7,0.7);
+    -ms-transform:scale(0.7,0.7);
+    
+    transform-origin:100% 0;
+    -webkit-transform-origin:100% 0;
+    -moz-transform-origin:100% 0;
+    -o-transform-origin:100% 0;
+    -ms-transform-origin:100% 0;
+    z-index:999999!important;
+}
+ 
+/*--------------------SCROLLBAR--------------------*/
+::-webkit-scrollbar {
+    width:17px;
+    height:17px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border:8px solid rgba(0,0,0,0);
+    background-clip:padding-box;
+    background-color:var(--Scrollbar-Thumb);
+}
+ 
+/*--------------------TEXT HIGHLIGHT--------------------*/
+::selection {
+color:var(--Main-Textbox-Background);
+background:var(--Main-Textbox-Text);
+}
+ 
+::-moz-selection {
+color:var(--Main-Textbox-Background);
+background:var(--Main-Textbox-Text);
+}
+ 
+/*---------------CUSTOMIZATION OPTIONS---------------*/
+/*--🌊🌊🌊🌊🌊🌊🌊--*/
+
+:root {
+    --Background:#000;
+    
+    --Sidebar-Image-Width:250px;
+    --Sidebar-Image-Bottom-Gap:6px;
+    
+    --Sidebar-Links-Circle-Size:13px;
+    --Sidebar-Links-Circle:#536464;
+    --Sidebar-Links-Circle-Hover:#718989;
+    --Sidebar-Links-Spacing:8px;
+    --Sidebar-Links-Right-Gap:8px;
+    
+    --Sidebar-Desc-Width:250px;
+    --Sidebar-Desc-MaxHeight:69px;
+    --Sidebar-Desc-Padding:12px;
+    --Sidebar-Desc-Background:0,0,0;
+    --Sidebar-Desc-Opacity:0.55;
+    --Sidebar-Desc-Text:#94a3a4;
+    --Sidebar-Desc-Font-Size:11px;
+    --Sidebar-Desc-Text-Line-Height:1.7em;
+    --Sidebar-Desc-Text-Links:#bdced0; /* if any */
+    --Sidebar-Desc-Text-Links-Border:#292929;
+    
+    --Sidebar-Right-Gap:25px;
+    
+    --About-Title:#bdced0;
+    --About-Title-Font-Size:25px;
+    --About-Title-Bottom-Gap:-10px;
+    --Main-Textbox-Width:600px;
+    --Main-Textbox-Padding:22px;
+    --Main-Textbox-Background:0,0,0;
+    --Main-Textbox-Opacity:0.55;
+    --Main-Textbox-Height:400px;
+    --Main-Textbox-Text:#94a3a4;
+    --Main-Textbox-Font-Size:11px;
+    --Main-Textbox-Links:#bdced0; /* if any */
+    --Main-Textbox-Links-Border:#292929;
+    --Main-Textbox-Line-Height:1.8em;
+    --Blockquote-Border:#718989;
+    --Blockquote-Margin:14px;
+    --Label-Highlight-Background:#181818;
+    --Label-Highlight-Text:#94a3a4;
+    
+    --Custom-Links-Top-Gap:10px;
+    --Custom-Links-Image-Size:54px;
+    --Custom-Links-Image-Padding:6px;
+    --Custom-Links-Border:#292929;
+    --Custom-Links-Spacing:12px;
+    
+    --Scrollbar-Thumb:#556767;
+    
+    --Music-Player-Background:#000;
+    --Music-Player-Border:#292929;
+    --Music-Player-Text:#94a3a4;
+    
+    --Tooltips-BG:#000;
+    --Tooltips-Text:#94a3a4;
+    --Credit-Color:#657b7b;
+}
+
+body {
+    /*------ BACKGROUND IMAGE ------*/
+    /*--🌊🌊🌊🌊🌊🌊🌊--*/
+    
+    background:var(--Background) url('//i.imgur.com/C2wjzlg.png');
+    background-attachment:fixed;
+    
+    /* full background image settings: */
+    /* if you want a tiled/patterned bg, remove the following lines */
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+body {
+    cursor:normal;
+    font-family:open sans;
+    line-height:1.6em;
+    font-size:12px;
+    text-align:left;
+}
+
+a {
+    text-decoration:none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+pre, code {white-space:pre-wrap;}
+pre {display:block;}
+
+img {vertical-align:middle;}
+
+/*-------------- CONTAINER --------------*/
+#horizontal-a {
+   position:fixed;
+   top:0;left:0;right:0;
+   margin:0 auto;
+   height:100vh;
+   text-align:center;
+}
+
+#horizontal-b {
+   display:inline-block;
+}
+
+#vertical-a {
+   height:100vh;
+   display:table;
+}
+
+#vertical-b {
+   display:table-cell;
+   vertical-align:middle;
+} 
+
+.felix {
+    display:flex;
+}
+
+.felix.main {
+    margin-top:calc(var(--Custom-Links-Image-Size) + (var(--Custom-Links-Image-Padding) * 2));
+}
+
+/*-------------- SIDEBAR --------------*/
+.sidebar {
+    margin-right:var(--Sidebar-Right-Gap);
+    margin-bottom:calc(var(--Custom-Links-Top-Gap) + var(--Custom-Links-Image-Size) + (var(--Custom-Links-Image-Padding) * 2) + 2px);
+    align-self:flex-end;
+}
+
+.sb-image {
+    margin-bottom:var(--Sidebar-Image-Bottom-Gap);
+    width:var(--Sidebar-Image-Width);
+}
+
+.sb-links {
+    margin-left:calc((var(--Sidebar-Links-Circle-Size) + var(--Sidebar-Links-Right-Gap)) * -1);
+    margin-right:var(--Sidebar-Links-Right-Gap);
+}
+
+.sb-links a {
+    display:block;
+    margin-bottom:var(--Sidebar-Links-Spacing);
+    width:var(--Sidebar-Links-Circle-Size);
+    height:var(--Sidebar-Links-Circle-Size);
+    background:var(--Sidebar-Links-Circle);
+    border-radius:100%;
+}
+
+.sb-links a:last-of-type {margin-bottom:0;}
+
+.sb-links a:hover {
+    background:var(--Sidebar-Links-Circle-Hover);
+}
+
+.sb-desc {
+    margin:auto;
+    width:var(--Sidebar-Desc-Width);
+    padding:var(--Sidebar-Desc-Padding) calc(var(--Sidebar-Desc-Padding) * 1.2);
+    background:rgba(var(--Sidebar-Desc-Background), var(--Sidebar-Desc-Opacity));
+    font-family:open sans;
+    font-size:var(--Sidebar-Desc-Font-Size);
+    color:var(--Sidebar-Desc-Text);
+    line-height:var(--Sidebar-Desc-Text-Line-Height);
+    text-align:left;
+}
+
+.charsiu {
+    padding-right:5px;
+    max-height:calc(var(--Main-Textbox-Height) - (var(--Main-Textbox-Padding) * 2));
+    max-height:var(--Sidebar-Desc-MaxHeight);
+    overflow-y:auto;
+}
+
+.sb-desc a {
+    color:var(--Sidebar-Desc-Text-Links);
+    padding-bottom:1px;
+    border-bottom:1px solid var(--Sidebar-Desc-Text-Links-Border);
+}
+
+.sb-desc p:-last-of-type {margin-bottom:0;}
+
+/*------------- MAIN BIO CONTAINER -------------*/
+
+.biocont {
+    align-self:flex-end;
+    width:var(--Main-Textbox-Width);
+    text-align:left;
+}
+
+.biotit {
+    margin-left:calc(var(--Main-Textbox-Padding) - 1px);
+    margin-bottom:var(--About-Title-Bottom-Gap);
+    font-family:van helsing;
+    font-size:var(--About-Title-Font-Size);
+    letter-spacing:3px;
+    color:var(--About-Title);
+    line-height:1em;
+}
+
+.main-textbox {
+    width:calc(100% - (var(--Main-Textbox-Padding) * 2));
+    padding:var(--Main-Textbox-Padding);
+    background:rgba(var(--Main-Textbox-Background), var(--Main-Textbox-Opacity));
+    font-family:open sans;
+    font-size:var(--Main-Textbox-Font-Size);
+    color:var(--Main-Textbox-Text);
+    line-height:var(--Main-Textbox-Line-Height);
+    text-align:justify;
+}
+
+.hargao {
+    padding-right:12px;
+    height:calc(var(--Main-Textbox-Height) - (var(--Main-Textbox-Padding) * 2));
+    overflow-y:auto;
+}
+
+.main-textbox a {
+    color:var(--Main-Textbox-Links);
+    padding-bottom:1px;
+    border-bottom:1px solid var(--Main-Textbox-Links-Border);
+}
+
+.main-textbox blockquote {
+    margin:calc(var(--Blockquote-Margin) * 0.8) var(--Blockquote-Margin);
+    padding-left:var(--Blockquote-Margin);
+    border-left:1px solid var(--Blockquote-Border);
+}
+
+.main-textbox label {
+    margin-right:2px;
+    padding:4px 6px;
+    background:var(--Label-Highlight-Background);
+    font-size:calc(var(--Main-Textbox-Font-Size) - 1px);
+    font-family:questrial;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--Label-Highlight-Text);
+}
+
+.main-textbox p:last-of-type {margin-bottom:0;}
+
+/*-------------- CUSTOM LINKS --------------*/
+.botlinks {
+    margin-top:var(--Custom-Links-Top-Gap);
+    margin-left:var(--Main-Textbox-Padding);
+}
+
+.botlinks a {
+    display:block;
+    margin-right:var(--Custom-Links-Spacing);
+}
+
+.bot-links a:last-child {margin-right:0;}
+
+.botlinks img {
+    width:var(--Custom-Links-Image-Size);
+    height:var(--Custom-Links-Image-Size);
+    padding:var(--Custom-Links-Image-Padding);
+    border-radius:100%;
+    border:1px solid var(--Custom-Links-Border);
+}
+
+.botlinks a:hover img {
+    transform:scale(1.2,1.2);
+}
+
+.botlinks img, .botlinks img:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+/*-------------- MUSIC PLAYER --------------*/
+/* music player skin by vitanica */
+#musicplayer {
+    position:fixed;
+    z-index:99;
+    top:0;margin-top:26px;
+    left:0;margin-left:26px;
+    display:flex;
+    -webkit-transition:all .7s ease;
+    -moz-transition:all .7s ease;
+    -o-transition:all .7s ease;
+    transition:all .7s ease;
+}
+ 
+#musicplayer > *, .play > * {align-self:center;-webkit-align-self:center}
+ 
+.roundthing {
+    width:31px;
+    height:31px;
+    border-radius:100%;
+    background:var(--Music-Player-Background); /* icon background */
+    border:3px double var(--Music-Player-Border);
+}
+ 
+.roundthing img {
+    margin:8px;
+    width:15px;
+}
+ 
+.midline {
+    width:0px;
+    height:3px;
+    background:var(--Music-Player-Border);
+    -webkit-transition:all .4s ease;
+    -moz-transition:all .4s ease;
+    -o-transition:all .4s ease;
+    transition-delay: .9s;
+    -webkit-transition-delay: .9s;
+}
+ 
+#musicplayer:hover .midline {
+    width:20px;
+    transition-delay:0s;
+    -webkit-transition-delay:0s;
+}
+ 
+.play {
+    display:flex;
+    height:31px;
+    text-align: left;
+    padding:0px 8px;
+    background: var(--Music-Player-Background); /* player background */
+    border-left: 3px solid var(--Music-Player-Border); /* player border */
+    color:var(--Music-Player-Text);
+    opacity: 0;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition-delay: .4s;
+    -webkit-transition-delay: .4s;
+}
+ 
+.music-controls, .music-controls > * {
+   user-select:none;
+   -webkit-user-select:none;
+   width:11px;
+   font-size:11px;
+   cursor:pointer;
+}
+ 
+.pausee {display:none;}
+ 
+.playtext {
+   margin-left:8px;
+   font-family:courier new;
+   font-size:9px;
+}
+ 
+#musicplayer:hover .play {
+    opacity:1;
+    transition-delay: .6s;
+    -webkit-transition-delay: .6s;
+}
+
+.glenjamin {
+    position:fixed;
+    bottom:0;padding-bottom:21px;
+    right:0;padding-right:21px;
+}
+ 
+.glenjamin svg {
+    width:13px;
+    height:13px;
+    color:var(--Credit-Color);
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+
+<div id="musicplayer">
+    <div class="roundthing">
+    <!--more music player gifs here:-->
+    <!--stewlate.tumblr.com/post/28218185078/music-player-gifs-->
+    <img src="//68.media.tumblr.com/tumblr_m7w2o3N94I1r6o8v2.gif"></div>
+    <div class="midline"></div>
+    <div class="play">
+        <div class="music-controls">
+            <div class="playy">►</div>
+            <div class="pausee">❚❚</div>
+        </div>
+        
+        
+        <!-------- MUSIC PLAYER TITLE -------->
+        <!--🌊🌊🌊🌊🌊🌊🌊-->
+        
+        <div class="playtext">Corvo Attano Theme</div>
+        
+        
+        
+    </div><!--play--><!--do not delete this line-->
+    
+    
+
+<!-------- MUSIC URL -------->
+<!-- 
+     to obtain a working audio, link, please read:
+     //glenthemes.tumblr.com/post/164215965424
+     
+     put the url between the quotation marks of src=""
+-->
+<!--🌊🌊🌊🌊🌊🌊🌊-->
+
+<audio id="tune" src="//dl.dropbox.com/s/s3uhp11jhmg5f29/Corvo%20Attano%20Theme.mp3" type="audio"></audio>
+</div><!--musicplayer-->
+
+
+
+<div id="horizontal-a">
+<div id="horizontal-b">
+<div id="vertical-a">
+<div id="vertical-b">
+<div class="felix main">
+    <div class="sidebar">
+    
+    
+        <!-------- SIDEBAR IMAGE -------->
+        <!--🌊🌊🌊🌊🌊🌊🌊-->
+        <!-- image url goes between quotation marks of src="" -->
+        
+        <img class="sb-image" src="//78.media.tumblr.com/3b17482e7865ba3ecb4a15622f698c53/tumblr_p354xhSEQr1qg2f5co2_1280.png">
+        
+        
+        <div class="felix">
+            <div class="sb-links">
+                
+                <!-------- SIDEBAR LINKS / NAVLINKS -------->
+                <!-- url goes between quotation marks of href="" -->
+                <!-- title="" is your hover text -->
+                <!--🌊🌊🌊🌊🌊🌊🌊-->
+                
+                <a href="/" title="home"></a>
+                <a href="/ask" title="message"></a>
+                <a href="/archive" title="archive"></a>
+                
+            </div><!--sb-links--><!--do not delete this line-->
+            
+            
+            <div class="sb-desc">
+            <div class="charsiu">
+            
+                <!-------- SIDEBAR DESCRIPTION TEXT -------->
+                <!--🌊🌊🌊🌊🌊🌊🌊-->
+                
+                Sidebar desc text goes here
+                <br>
+                <a href="//google.com">example link</a>
+            
+            
+            </div><!--charsiu-->
+            </div><!--sb-desc-->
+        </div><!--felix-->
+    </div><!--sidebar-->
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    <div class="biocont">
+    
+        <!-------- MAIN TITLE -------->
+        <!--🌊🌊🌊🌊🌊🌊🌊-->
+        <div class="biotit">your title here</div>
+        
+        
+        
+        <div class="main-textbox">
+        <div class="hargao">
+        
+            <!-------- MAIN TEXT -------->
+            <!--🌊🌊🌊🌊🌊🌊🌊-->
+            
+            <!-- START ONE STAT LINE -->
+            <!--🐟🐟🐟🐟🐟🐟🐟-->
+            <blockquote>
+                <label>stat name:</label> stat detail
+            </blockquote>
+            <!--🛑🛑🛑🛑🛑🛑🛑-->
+            <!-- END ONE STAT LINE -->
+            
+            <blockquote>
+                <label>stat name:</label> stat detail
+            </blockquote>
+            
+            <blockquote>
+                <label>stat name:</label> stat detail
+            </blockquote>
+            
+            <blockquote>
+                <label>stat name:</label> stat detail
+            </blockquote>
+            
+            here's some text
+            <p>
+            to adjust the height of the container, go to :root
+        </div><!--hargao-->
+        </div><!--main-textbox-->
+        
+        
+        
+        
+        
+        
+        
+        <div class="botlinks felix">
+        
+            <!-------- CUSTOM LINKS (BOTTOM) -------->
+            <!-- 
+                 link url goes between quote marks of href=""
+                 hover text goes between quote marks of title=""
+                 image url goes between quote marks of src=""
+            -->
+            <!--🌊🌊🌊🌊🌊🌊🌊-->
+            
+            
+            
+            <!-- START ONE LINK -->
+            <!--🐟🐟🐟🐟🐟🐟🐟-->
+            
+            <a href="URL HERE" title="LINK HOVER TEXT"><img src="//dl.dropbox.com/s/ipi735msr65n923/dh2_corvo_a.png"></a>
+            
+            <!--🛑🛑🛑🛑🛑🛑🛑-->
+            <!-- END ONE LINK -->
+            
+            <a href="URL HERE" title="LINK HOVER TEXT"><img src="//dl.dropbox.com/s/ayfw4o8etbzia00/dh2_corvo_b.png"></a>
+            
+            
+            <a href="URL HERE" title="LINK HOVER TEXT"><img src="//dl.dropbox.com/s/moaiej80xixehop/dh2_corvo_c.png"></a>
+            
+            
+            <a href="URL HERE" title="LINK HOVER TEXT"><img src="//dl.dropbox.com/s/a2mmiza57liyy8k/dh2_corvo_d.png"></a>
+            
+            
+            <a href="URL HERE" title="LINK HOVER TEXT"><img src="//dl.dropbox.com/s/fmqeh6c9b95oef5/dh2_corvo_e.png"></a>
+            
+            
+            <a href="URL HERE" title="LINK HOVER TEXT"><img src="//dl.dropbox.com/s/qfjxb6cv4jnh6hg/dh2_corvo_f.png"></a>
+            
+            
+            
+        </div><!--botlinks--><!-- do not delete below this line-->
+    </div><!--biocont-->
+</div><!--felix-->
+</div><!--vertical-b-->
+</div><!--vertical-a-->
+</div><!--horizontal-b-->
+</div><!--horizontal-a-->
+
+<a class="glenjamin" href="//glenthemes.tumblr.com" title="page by glenthemes"><i data-feather="code"></i></a>
+
+<script>feather.replace()</script>
+
+</body>
+</html>
+
+
